@@ -160,33 +160,13 @@ img {
     padding: 1rem 0;
 }
 
-#home .container {
-    margin: 0;
+.section .title {
+    margin-bottom: 1rem;
 }
 
 .grid {
     display: grid;
     gap: 2rem;
-}
-
-#home .text {
-    margin-left: 1.5rem;
-    margin-right: 1.5rem;
-    text-align: center;
-}
-
-#home .text h1 {
-    margin-bottom: 1rem;
-}
-
-#home .text p {
-    margin-bottom: 2rem;
-}
-
-#home .image {
-    margin-left: 1.5rem;
-    margin-right: 1.5rem;
-    position: relative;
 }
 
 .button {
@@ -210,3 +190,61 @@ img {
     hsla(var(--hue),36%, 57%, 1) 0%,
     hsla(var(--hue),65%, 88%, 0.34) 100%);
 }
+
+/* Session Home */
+
+#home .container {
+    margin: 0;
+}
+
+#home .text {
+    margin-left: 1.5rem;
+    margin-right: 1.5rem;
+    text-align: center;
+}
+
+#home .text h1 {
+    margin-bottom: 1rem;
+}
+
+#home .text p {
+    margin-bottom: 2rem;
+}
+
+#home .image {
+    margin-left: 1.5rem;
+    margin-right: 1.5rem;
+    position: relative;
+}
+
+/* Session About */
+
+#abou {
+    background: white;
+}
+
+#about .container {
+    margin: 0;
+}
+
+#about .text {
+    margin-left: 1.5rem;
+    margin-right: 1.5rem;
+    text-align: justify;
+}
+
+#about .text h1 {
+    margin-bottom: 1rem;
+}
+
+#about .text p {
+    margin-bottom: 2rem;
+}
+
+#about .image {
+    margin-left: 1.5rem;
+    margin-right: 1.5rem;
+    position: relative;
+}
+
+/* Session About */
