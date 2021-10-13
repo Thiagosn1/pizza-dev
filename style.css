@@ -53,6 +53,10 @@ main {
   color: var(--base-color);
 }
 
+.logo-alt span {
+  color: var(--body-color);
+}
+
 html {
   scroll-behavior: smooth;
 }
@@ -291,6 +295,61 @@ img {
   margin-bottom: 0.75rem;
 }
 
+/* Session Contact */
 
+#contact .grid {
+  gap: 4rem;
+}
+#contact .text p {
+  margin-bottom: 2rem;
+  text-align: justify;
+}
 
+#contact .button {
+  margin-top: 1.5rem;
+}
+
+#contact .button i {
+  font-size: 1.5rem;
+  margin-right: 0.675rem;
+}
+
+#contact ul.grid {
+  gap: 2rem;
+}
+
+#contact ul li i {
+  color: var(--base-color);
+  font-size: 1.5rem;
+  margin-right: 0.625rem;
+}
+
+#contact .align-center {
+  text-align: center;
+}
+
+/* Session Footer */
+
+footer {
+  background: var(--base-color);
+}
+
+footer .logo {
+  display: inline-block;
+  margin-bottom: 1.5rem;
+}
+
+footer .brand p {
+  color: var(--text-color-light);
+  margin-bottom: 0.75rem;
+}
+
+footer i {
+  font-size: 1.5rem;
+  color: var(--text-color-light);
+}
+
+footer .social a {
+  margin-right: 2rem;
+}
 /* https://developer.mozilla.org/en-US/docs/Web/CSS/position */
