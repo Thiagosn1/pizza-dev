@@ -26,6 +26,13 @@ ul {
   --text-color: hsl(0 0% 46%);
   --text-color-light: hsl(0 0% 98%);
   --body-color: hsl(0 0% 98%);
+
+  /* fonts */
+  --title-font-size: 2rem;
+  --subtitle-font-size: 1rem;
+
+  --title-font: 'Poppins', sans-serif;
+  --body-font: 'DM Sans', sans-serif;
 }
 
 #header {
@@ -45,7 +52,7 @@ main {
 }
 
 .logo {
-  font: 700 1.5rem 'Poppins', sans-serif;
+  font: 700 1.5rem var(--title-font);
   color: var(--title-color);
 }
 
@@ -62,14 +69,14 @@ html {
 }
 
 body {
-  font: 400 1rem 'DM Sans', sans-serif;
+  font: 400 1rem var(--body-font);
   color: var(--text-color);
   background: var(--body-color);
   -webkit-font-smoothing: antialiased;
 }
 
 .title {
-  font: 700 1.875rem 'Poppins', sans-serif; /* 1 rem = 16 px */
+  font: 700 1.875rem var(--title-font); /* 1 rem = 16 px */
   color: var(--title-color);
 }
 
@@ -86,7 +93,6 @@ nav {
   width: 100%;
 }
 
-
 .toggle {
   font-size: 1.5rem;
   color: var(--base-color);
@@ -101,10 +107,9 @@ nav .icon-close {
 
   position: absolute;
   right: 1.5rem;
-
 }
 
-nav.show div.icon-close{
+nav.show div.icon-close {
   visibility: visible;
   top: 1.5rem;
   opacity: 1;
@@ -113,7 +118,7 @@ nav.show div.icon-close{
 nav.show .menu {
   opacity: 1;
   visibility: visible;
-  background: var(--body-color); 
+  background: var(--body-color);
   height: 100vh;
   width: 100vw;
   top: 0;
@@ -134,18 +139,17 @@ nav ul li a:hover {
   color: var(--base-color);
 }
 
-nav ul li a::after{
-  content: "";
+nav ul li a::after {
+  content: '';
   width: 0%;
   height: 2px;
-  background: var(--base-color) ; 
+  background: var(--base-color);
 
   position: absolute;
   left: 0;
   bottom: -1rem;
 
   transition: 0.2s;
-
 }
 
 nav ul li a:hover::after {
@@ -153,7 +157,7 @@ nav ul li a:hover::after {
 }
 
 nav.show ul.grid {
-    gap: 4rem;
+  gap: 4rem;
 }
 
 nav.show .menu {
@@ -179,6 +183,10 @@ img {
   margin-bottom: 1rem;
 }
 
+.section .subtitle {
+  font-size: var(--subtitle-font-size);
+}
+
 .grid {
   display: grid;
   gap: 2rem;
@@ -191,7 +199,7 @@ img {
   align-items: center;
   height: 3.5rem;
   padding: 0 2rem;
-  font: 500 1rem 'DM Sans', sans-serif;
+  font: 500 1rem var(--body-font);
   transform: background 0.3s;
 }
 
@@ -207,7 +215,6 @@ img {
     hsla(var(--hue), 65%, 88%, 0.34) 100%
   );
 }
-
 
 /* Session Home */
 
@@ -271,11 +278,11 @@ img {
   text-align: justify;
 }
 
-.card{
+.card {
   padding: 3.625rem 2rem;
   box-shadow: var(--base-color);
-  border-bottom: .25rem solid var(--base-color);
-  border-radius: .25rem .25rem 0 0;
+  border-bottom: 0.25rem solid var(--base-color);
+  border-radius: 0.25rem 0.25rem 0 0;
   text-align: center;
 }
 
@@ -295,11 +302,13 @@ img {
   margin-bottom: 0.75rem;
 }
 
+
 /* Session Contact */
 
 #contact .grid {
   gap: 4rem;
 }
+
 #contact .text p {
   margin-bottom: 2rem;
   text-align: justify;
@@ -315,7 +324,7 @@ img {
 }
 
 #contact ul.grid {
-  gap: 2rem;
+  gap: 1.5rem;
 }
 
 #contact ul li i {
@@ -324,9 +333,10 @@ img {
   margin-right: 0.625rem;
 }
 
-#contact .align-center {
+#contact .align_button {
   text-align: center;
 }
+
 
 /* Session Footer */
 
@@ -352,4 +362,124 @@ footer i {
 footer .social a {
   margin-right: 2rem;
 }
+
+/* @Media */
+
+/* > 1200px extra large */
+/* > 1023 large */
+/* > 992 large */
+/* > 767 medium */
+
+@media (min-width: 992px) {
+  .title {
+    font-size: 2.25rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  .section {
+    padding: 10rem 0;
+  }
+
+  .container {
+    max-width: 1120px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .button { 
+     height: 3.125rem;
+  }
+
+  nav .menu {
+    opacity: 1;
+    visibility: visible;
+    top: 0;
+  }
+
+  nav .menu ul {
+    display: flex;
+    gap: 2rem;
+  }
+
+  nav .menu ul a.title {
+    font: 400 1rem var(--title-font);
+  }
+
+  nav .icon-menu {
+    display: none;
+  }
+
+  #home .image {
+    order: 1;
+  }
+
+  #home .text {
+    order: 0;
+    max-width: 24rem;
+    text-align: left;
+  }
+
+  #home .container {
+    grid-auto-flow: column;
+    justify-content: space-between;
+    margin: 0 auto;
+  }
+
+ #about .container {
+   grid-auto-flow: column;
+   margin: 0 auto;
+ }
+
+ .section header {
+   max-width: 32rem;
+   text-align: center;
+   margin-left: auto;
+   margin-right: auto;
+ }
+
+ .cards {
+   grid-template-columns: 1fr 1fr 1fr;
+ }
+
+ .card {
+  padding-left: 3rem;
+  padding-right: 3rem;
+}
+
+#contact .container {
+  grid-auto-flow: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#contact .text {
+  max-width: 25rem;
+}
+
+#contact .align_button {
+  text-align: left;
+}
+
+footer .container {
+  grid-auto-flow: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+footer.section {
+  padding: 3.75rem 0;
+}
+
+footer .logo {
+  font-size: 2.5rem;
+}
+
+
+  :root {
+    --title-font-size: 2.25rem;
+    --subtitle-font-size: 1.125rem;
+  }
+}
+
 /* https://developer.mozilla.org/en-US/docs/Web/CSS/position */
